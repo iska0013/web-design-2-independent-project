@@ -22,6 +22,7 @@ html {
 }
 
 /* START styles from Thomas's old code */
+
 a:focus,
 [tabindex="0"]:focus,
 details:focus,
@@ -67,11 +68,26 @@ a:focus, [tabindex="0"]:focus {
   outline-offset: 3px;
   top: 0;
 }
+
 /* END Thomas styles */
 
 /* Start project custom CSS */
+
 body {
   margin: 0;
+}
+
+.btn {
+  padding: .8rem 2.5rem 1rem;
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: darkred;
 }
 
 .nav-grid {
@@ -103,9 +119,18 @@ a:not(.current) {
   padding: 1.4em;
 }
 
+.nav-link {
+  background-color: white;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  background-color: red;
+}
+
 .banner-image {
   width: 100vw;
-  height: 500px;
+  height: 300px;
   object-fit: cover;
 }
 
@@ -120,6 +145,66 @@ img {
   width: 100%;
 }
 
+#image1 {
+  grid-area: image1;
+}
+
+#image2 {
+  grid-area: image2;
+}
+
+#header1 {
+  grid-area: header1;
+}
+
+#header2 {
+  grid-area: header2;
+}
+
+#header3 {
+  grid-area: header3;
+}
+
+#header4 {
+  grid-area: header4;
+}
+
+#text1 {
+  grid-area: text1;
+}
+
+#text2 {
+  grid-area: text2;
+}
+
+#text3 {
+  grid-area: text3;
+}
+
+#text4 {
+  grid-area: text4;
+}
+
+.section-4 p:nth-of-type(1) {
+  grid-area: text4a;
+}
+
+.section-4 p:nth-of-type(2) {
+  grid-area: text4b;
+}
+
+#text4 > p:nth-of-type(3) {
+  grid-area: text4c;
+}
+
+#text4 > p:nth-of-type(4) {
+  grid-area: text4d;
+}
+
+.section-4 .btn {
+  grid-area: btn4;
+}
+
 .section-1 {
   display: grid;
   grid-template-areas:
@@ -129,59 +214,97 @@ img {
   justify-items: center;
   padding: 2rem;
   gap: 2rem;
+  text-align: center;
 }
 
 .section-2 {
   display: grid;
   grid-template-areas:
     "image2"
+    "header2"
     "text2";
   align-items: center;
   justify-items: center;
   padding: 2rem;
   gap: 2rem;
+  text-align: center;
 }
 
 .section-3 {
   display: grid;
   grid-template-areas:
-    "header"
+    "header3"
     "text3";
   align-items: center;
   justify-items: center;
   padding: 2rem;
   gap: 2rem;
+  text-align: center;
 }
 
-#image {
-  grid-area: image;
-}
-
-#text {
-  grid-area: text;
+.section-4 {
+  display: grid;
+  grid-template-areas:
+    "header4"
+    "text4"
+    "btn4";
+  align-items: center;
+  justify-items: center;
+  padding: 2rem;
+  gap: 2rem;
+  text-align: center;
+  background-color: #ccc;
 }
 
 footer {
   text-align: center;
 }
 
-@media only screen and (min-width: 30em) {
+@media only screen and (min-width: 50em) {
+
   .section-1 {
-    grid-template-areas:
-      "text1 image1";
-    justify-items: left;
+    grid-template-areas: "text1 image1";
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
   }
 
   .section-2 {
     grid-template-areas:
+      "image2 header2"
       "image2 text2";
-    justify-items: left;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
   }
 
   .section-3 {
-    grid-template-areas:
-      "header text3";
+    grid-template-areas: "header3 text3";
     justify-items: left;
+    text-align: left;
   }
+
+  .section-4 {
+    grid-template-areas:
+      "header4"
+      "text4"
+      "btn4";
+    text-align: center;
+  }
+
+  #text4 {
+    display: grid;
+    grid-template-areas:
+      "text4a text4c"
+      "text4b text4d"
+      "h4 h4";
+    text-align: left;
+    gap: 2em;
+  }
+
+  #text4 > h3 {
+    grid-area: h4;
+    text-align: center;
+  }
+
 }
+
 /* End custom CSS */
