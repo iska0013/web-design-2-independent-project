@@ -1,0 +1,187 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+  box-sizing: border-box;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.5;
+  background-color: #777;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* START styles from Thomas's old code */
+a:focus,
+[tabindex="0"]:focus,
+details:focus,
+summary:focus,
+input:focus,
+textarea:focus,
+button:focus,
+select:focus {
+  outline: 3px solid #000;
+  outline-offset: 0;
+}
+
+a:focus, [tabindex="0"]:focus {
+  outline-offset: 3px;
+}
+
+.skip-links {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.skip-links > li::before {
+  content: none; /* Remove the bullets if nice lists is selected */
+}
+
+.skip-links a,
+.skip-links button {
+  padding: .5em .75em;
+  position: absolute;
+  top: -10em;
+  z-index: 10000; /* To make sure they're always on top */
+  background-color: #000;
+  border: 0;
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.skip-links a:focus,
+.skip-links button:focus {
+  outline-offset: 3px;
+  top: 0;
+}
+/* END Thomas styles */
+
+/* Start project custom CSS */
+body {
+  margin: 0;
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+nav ul {
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.flex > li {
+  display: inline-block;
+}
+
+a:not(.current) {
+  text-decoration: none;
+}
+
+.flex > li a {
+  padding: 1.4em;
+}
+
+.banner-image {
+  width: 100vw;
+  height: 500px;
+  object-fit: cover;
+}
+
+.banner-image-2 {
+  width: 100vw;
+  height: 300px;
+  object-fit: cover;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.section-1 {
+  display: grid;
+  grid-template-areas:
+    "image1"
+    "text1";
+  align-items: center;
+  justify-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.section-2 {
+  display: grid;
+  grid-template-areas:
+    "image2"
+    "text2";
+  align-items: center;
+  justify-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.section-3 {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "text3";
+  align-items: center;
+  justify-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+#image {
+  grid-area: image;
+}
+
+#text {
+  grid-area: text;
+}
+
+footer {
+  text-align: center;
+}
+
+@media only screen and (min-width: 30em) {
+  .section-1 {
+    grid-template-areas:
+      "text1 image1";
+    justify-items: left;
+  }
+
+  .section-2 {
+    grid-template-areas:
+      "image2 text2";
+    justify-items: left;
+  }
+
+  .section-3 {
+    grid-template-areas:
+      "header text3";
+    justify-items: left;
+  }
+}
+/* End custom CSS */
