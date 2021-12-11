@@ -31,7 +31,7 @@ input:focus,
 textarea:focus,
 button:focus,
 select:focus {
-  outline: 3px solid #000;
+  outline: 3px solid #CBC3E3;
   outline-offset: 0;
 }
 
@@ -253,7 +253,7 @@ img {
   padding: 2rem;
   gap: 2rem;
   text-align: center;
-  background-color: #ccc;
+  background-color: #69455E;
 }
 
 footer {
