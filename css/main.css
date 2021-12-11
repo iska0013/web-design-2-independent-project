@@ -12,7 +12,7 @@ html {
   text-size-adjust: 100%;
   font-family: "Work Sans", sans-serif;
   line-height: 1.5;
-  background-color: #777;
+  background-color: #E0E7D7;
 }
 
 *,
@@ -57,7 +57,7 @@ a:focus, [tabindex="0"]:focus {
   z-index: 10000; /* To make sure they're always on top */
   background-color: #000;
   border: 0;
-  color: #fff;
+  color: #ACBF8F;
   font-size: 1.125rem;
   font-weight: bold;
   text-decoration: none;
@@ -79,7 +79,7 @@ body {
 
 .btn {
   padding: .8rem 2.5rem 1rem;
-  background-color: #333;
+  background-color: #ACBF8F;
   color: white;
   font-weight: bold;
   border-radius: 4px;
@@ -125,7 +125,7 @@ a:not(.current) {
 
 .nav-link:hover,
 .nav-link:active {
-  background-color: red;
+  background-color: #344021;
 }
 
 .banner-image {
