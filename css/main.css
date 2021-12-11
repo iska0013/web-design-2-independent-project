@@ -31,7 +31,7 @@ input:focus,
 textarea:focus,
 button:focus,
 select:focus {
-  outline: 3px solid #CBC3E3;
+  outline: 3px solid #D8BFD8;
   outline-offset: 0;
 }
 
@@ -55,7 +55,7 @@ a:focus, [tabindex="0"]:focus {
   position: absolute;
   top: -10em;
   z-index: 10000; /* To make sure they're always on top */
-  background-color: #000;
+  background-color: #D8BFD8;
   border: 0;
   color: #ACBF8F;
   font-size: 1.125rem;
@@ -87,7 +87,7 @@ body {
 
 .btn:hover,
 .btn:active {
-  background-color: darkred;
+  background-color: #69455E;
 }
 
 .nav-grid {
@@ -253,7 +253,7 @@ img {
   padding: 2rem;
   gap: 2rem;
   text-align: center;
-  background-color: #69455E;
+  background-color: #D8BFD8;
 }
 
 footer {
