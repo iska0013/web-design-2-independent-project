@@ -83,6 +83,7 @@ body {
   color: white;
   font-weight: bold;
   border-radius: 4px;
+  align: center;
 }
 
 .btn:hover,
@@ -159,6 +160,7 @@ img {
 
 h3 {
   color: #69455E;
+  text-align: left;
 }
 #header2 {
   grid-area: header2;
@@ -174,6 +176,7 @@ h3 {
 
 h2 {
   color: #69455E;
+  text-align: left;
 }
 
 #text1 {
@@ -210,6 +213,7 @@ h2 {
 
 .section-4 .btn {
   grid-area: btn4;
+  align: center;
 }
 
 .section-1 {
@@ -255,8 +259,8 @@ h2 {
     "header4"
     "text4"
     "btn4";
-  align-items: left;
-  justify-items: left;
+  align-items: center;
+  justify-items: center;
   padding: 2rem;
   gap: 2rem;
   text-align: left;
@@ -309,7 +313,7 @@ footer {
 
   #text4 > h3 {
     grid-area: h4;
-    text-align: center;
+    text-align: left;
   }
 
 }
