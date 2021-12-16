@@ -2,7 +2,7 @@
 <html lang="en-ca">
 <head>
   <meta charset="utf-8">
-  <title>Makdous · Home</title>
+  <title>Makdous · Contact</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/main.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,8 +18,7 @@
     <li><a href="#nav">Jump to navigation</a></li>
   </ul>
 
-
-  <header id="navigation" role="banner">
+  <header id="nav" role="banner" tabindex="0">
     <nav role="navigation" class="nav-grid">
       <div>
         <ul class="flex">
@@ -33,22 +32,84 @@
             <a class="current nav-link" href="contact.html">Contact</a>
           </li>
         </ul>
-    </div>
-    <div>
-      <h1>
-        <a href="index.html" aria-label="#">
-          <img src="images/logo.png" alt="#">
-        </a>
-      </h1>
-    </div>
+      </div>
+      <div>
+        <h1>
+          <a href="index.html" aria-label="#">
+            <img class="logo-small" src="favicon-196.png" alt="Makdous eggplant icon">
+            <img class="logo" src="logo.svg" alt="Makdous eggplant icon and text">
+          </a>
+        </h1>
+      </div>
     </nav>
   </header>
 
+  <main role="main" id="main" tabindex="0">
+    <img class="banner-image" src="images/pink-background.jpg" alt="Primary banner image">
 
-  <main role="main" id="main">
+    <h2 class="h2-center">Ordering Process</h2>
+
+    <form method="POST" action="#" novalidate>
+      <fieldset class="form-grid">
+        <legend>Order Information</legend>
+          <div id="size">
+            <label for="dropdown-1">Select the size you'd like to order</label>
+            <select name="dropdown-1" id="dropdown-1">
+              <option disabled selected>– Select One –</option>
+              <option>Small</option>
+              <option>Medium</option>
+              <option>Large</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Contact Information</legend>
+          <div id="name">
+            <label for="name">Full Name</label>
+            <input id="name" placeholder="Firstname Lastname">
+          </div>
+
+          <div id="phone">
+            <label for="phone">Phone Number</label>
+            <input type="phone" id="phone" placeholder="+X (XXX) XXX-XXXX" required aria-describedby="Please enter a valid phone number">
+          </div>
+
+          <div id="address">
+            <label for="address">Shipping Address</label>
+            <input id="address" placeholder="123 Drury Lane, Candy Cane Town, Antarctica, 96598">
+          </div>
+
+          <div>
+            <label for="email-1">Email 1</label>
+            <input type="email-1" id="email-1" placeholder="Email 1" required>
+          </div>
+      </fieldset>
+    
+      <fieldset class="push-0">
+        <legend>Shipping Method</legend>
+        <div>
+          <div>
+            <input type="radio" id="radio-label-1" name="radio-name-1" checked required aria-describedby="Please select an option">
+            <label for="radio-label-1">Radio Option 1</label>
+          </div>
+          
+          <div>
+            <input type="radio" id="radio-label-2" name="radio-name-1" checked required aria-describedby="Please select an option">
+            <label for="radio-label-2">Radio Option 2</label>
+          </div>
+          </div>
+        </div>
+      </fieldset>
+    
+      <div class="center">
+        <button class="btn" aria_label="Submit the form" type="submit" tabindex="0">Complete & Submit</button>
+      </div>
+    </form>
   </main>
 
   <footer role="contentinfo">
+    <p><small>© Faten Iskandar</small></p>
   </footer>
 
 </body>
